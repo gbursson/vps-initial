@@ -24,9 +24,10 @@ ufw allow SSH
 ufw limit SSH
 ```
 
-## Docker and docker compose install
+## Docker and docker compose install / service start / adding user to docker group
 ```
 # as root
 pacman -S docker docker-compose
+systemctl enable docker
 usermod -aG docker <username>
 

@@ -1,12 +1,12 @@
 # vps-initial
 
-## System update
+### System update
 ```
 # as root
 pacman -Syu
 ```
 
-## Adding and enabling new user.
+### Adding and enabling new user.
 
 ```
 # as root
@@ -15,7 +15,7 @@ visudo <uncomment wheel line>
 pacman -S bash-completion
 ```
 
-## Enabling ufw firewall and opening SSH Limited port
+### Enabling ufw firewall and opening SSH Limited port
 
 ```
 # as root
@@ -24,10 +24,21 @@ ufw allow SSH
 ufw limit SSH
 ```
 
-## Docker and docker compose install / service start / adding user to docker group
+### Docker and docker compose install / service start / adding user to docker group
 ```
 # as root
 pacman -S docker docker-compose
 systemctl enable docker
 usermod -aG docker <username>
+```
 
+### Disable root account
+```
+$ as a regular user
+sudo passwd -l root
+```
+
+- ### Various utilities install
+- ```
+- # as a regular user
+- sudo pacman -S htop 

@@ -4,6 +4,7 @@
 <<<<<<< HEAD
 add pathogen installation
 add dotbot installation
+add git config section? [or is it included in dotbot?]
 =======
 add pathogen installation
 add dotbot installation

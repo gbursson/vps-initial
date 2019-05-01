@@ -1,8 +1,13 @@
 # vps-initial
 
 ## _TODO_
-add pathogen installation + URLs
-add dotbot installation + URLs
+<<<<<<< HEAD
+add pathogen installation
+add dotbot installation
+=======
+add pathogen installation
+add dotbot installation
+>>>>>>> c65d8834a915333073d5167a6eb1251f6f610fec
 
 ### System update
 ```

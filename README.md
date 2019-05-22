@@ -1,6 +1,6 @@
 ## VPS Initial setup instructions (Arch Linux)
 
-System-wide update
+### System-wide update
 ```
 # as root
 pacman -Syu
@@ -8,7 +8,7 @@ pacman -Syu
 
 ---
 
-Enabling ufw firewall and opening SSH Limited port
+### Enable ufw firewall and opening SSH Limited port
 ```
 pacman -S ufw
 ufw allow SSH
@@ -17,7 +17,7 @@ ufw limit SSH
 
 ---
 
-Adding and enabling new user (_crucial, as next step is to disable root login_).
+### Add and enable new user (_crucial, as next step is to disable root login_).
 ```
 # as root
 useradd -m -G wheel <username>
@@ -26,7 +26,9 @@ visudo
 ```
 uncomment `%wheel ALL=(ALL) ALL` line
 
-Disable root account and disable root login for SSH
+---
+
+### Disable root account and disable root login for SSH
 ```
 $ as a regular user
 sudo passwd -l root
@@ -40,7 +42,7 @@ sudo vim /etc/ssh/sshd_config
 
 ---
 
-Change the hostname
+### Change the hostname
 ```
 sudo hostnamectl set-hostname <new hostname>
 sudo hostnamectl set-icon-name <new hostname>
@@ -48,15 +50,14 @@ sudo hostnamectl set-icon-name <new hostname>
 
 ---
 
-
-Install dotfiles repository
+### Install dotfiles repository
 ```
 git clone https://github.com/gbursson/dotbot ~/dotfiles
 rm .bashrc
 cd dotfiles/
 ./install
 ```
-Install Git Prompt
+### Install Git Prompt
 ```
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 ```

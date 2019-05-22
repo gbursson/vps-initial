@@ -42,6 +42,15 @@ sudo vim /etc/ssh/sshd_config
 
 ---
 
+Set git credential cache to 60 minutes and add basic user info to git config global file
+```
+git config --global credential.helper 'cache --timeout=3600'
+git config --global user.name "Your Name Comes Here"
+git config --global user.email you@yourdomain.example.com
+```
+
+---
+
 ### Change the hostname
 ```
 sudo hostnamectl set-hostname <new hostname>
@@ -57,11 +66,23 @@ rm .bashrc
 cd dotfiles/
 ./install
 ```
+---
+
 ### Install Git Prompt
 ```
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 ```
 
+---
+
+### Docker install and setup
+
+```
+$ as user
+sudo pacman -S docker docker-compose
+sudo usermod -aG docker <username>
+sudo systemctl enable docker
+```
 
 
 

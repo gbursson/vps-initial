@@ -42,7 +42,7 @@ sudo vim /etc/ssh/sshd_config
 
 ---
 
-Set git credential cache to 60 minutes and add basic user info to git config global file
+### Set git credential cache to 60 minutes and add basic user info to git config global file
 ```
 git config --global credential.helper 'cache --timeout=3600'
 git config --global user.name "Your Name Comes Here"

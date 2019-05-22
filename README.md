@@ -1,4 +1,4 @@
-# VPS Initial setup instructions (Arch Linux)
+## VPS Initial setup instructions (Arch Linux)
 
 System-wide update
 ```

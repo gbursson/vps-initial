@@ -1,9 +1,10 @@
 ## VPS Initial setup instructions (Arch Linux)
 
-### System-wide update
+### System-wide update & basic extra utilities install
 ```
 # as root
 pacman -Syu
+pacman -S bash-completion htop vnstat exa
 ```
 
 ---

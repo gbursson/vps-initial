@@ -3,7 +3,7 @@
 A set of instructions / commands to quickly bring an Arch Linux VPS back to operational from baseline re-install.
 
 
-### System-wide update & basic extra utilities install
+#### System-wide update & basic extra utilities install
 ```
 # as root
 pacman -Syu
@@ -12,7 +12,7 @@ pacman -S bash-completion htop vnstat exa
 
 ---
 
-### Enable ufw firewall and opening SSH Limited port
+#### Enable ufw firewall and opening SSH Limited port
 ```
 pacman -S ufw
 ufw allow SSH
@@ -21,7 +21,7 @@ ufw limit SSH
 
 ---
 
-### Add and enable new user (_crucial, as next step is to disable root login_).
+#### Add and enable new user (_crucial, as next step is to disable root login_).
 ```
 # as root
 useradd -m -G wheel <username>
@@ -32,7 +32,7 @@ uncomment `%wheel ALL=(ALL) ALL` line
 
 ---
 
-### Disable root account and disable root login for SSH
+#### Disable root account and disable root login for SSH
 ```
 $ as a regular user
 sudo passwd -l root
@@ -46,7 +46,7 @@ sudo vim /etc/ssh/sshd_config
 
 ---
 
-### Set git credential cache to 60 minutes and add basic user info to git config global file
+#### Set git credential cache to 60 minutes and add basic user info to git config global file
 ```
 git config --global credential.helper 'cache --timeout=3600'
 git config --global user.name "Your Name Comes Here"
@@ -55,7 +55,7 @@ git config --global user.email you@yourdomain.example.com
 
 ---
 
-### Change the hostname
+#### Change the hostname
 ```
 sudo hostnamectl set-hostname <new hostname>
 sudo hostnamectl set-icon-name <new hostname>
@@ -63,7 +63,7 @@ sudo hostnamectl set-icon-name <new hostname>
 
 ---
 
-### Install dotfiles repository
+#### Install dotfiles repository
 ```
 git clone https://github.com/gbursson/dotbot ~/dotfiles
 rm .bashrc
@@ -72,14 +72,14 @@ cd dotfiles/
 ```
 ---
 
-### Install Git Prompt
+#### Install Git Prompt
 ```
 git clone https://github.com/magicmonty/bash-git-prompt.git ~/.bash-git-prompt --depth=1
 ```
 
 ---
 
-### Docker install and setup
+#### Docker install and setup
 
 ```
 $ as user

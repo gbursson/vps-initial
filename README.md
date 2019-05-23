@@ -1,5 +1,8 @@
 ## VPS Initial setup instructions (Arch Linux)
 
+A set of instructions / commands to quickly bring an Arch Linux VPS back to operational from baseline re-install.
+
+
 ### System-wide update & basic extra utilities install
 ```
 # as root
